@@ -450,3 +450,1744 @@ MIT License - Free for personal and commercial use
 [⬆️ Back to Top](#-vite-project-setup-scripts-collection)
 
 </div>
+
+---
+
+## 📦 All Setup Scripts (Copy & Paste into VS Code)
+
+> **Tip:** Copy the code block for the script you want, paste into VS Code, and save as the filename in the comment.
+
+<details>
+<summary><strong>setup-vite-react-js.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-react-js.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with React and JavaScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with React template
+npm create vite@"latest" $ProjectName --template react
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/index.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-react eslint-plugin-react-hooks prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with React and JavaScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-react-ts.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-react-ts.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with React and TypeScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with React + TypeScript template
+npm create vite@"latest" $ProjectName --template react-ts
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/index.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-react eslint-plugin-react-hooks prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with React and TypeScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-vue-js.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-vue-js.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Vue.js and JavaScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Vue.js template
+npm create vite@"latest" $ProjectName --template vue
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/assets/main.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-vue prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Vue.js and JavaScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-vue-ts.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-vue-ts.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Vue.js and TypeScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Vue.js + TypeScript template
+npm create vite@"latest" $ProjectName --template vue-ts
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/assets/main.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-vue prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Vue.js and TypeScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-svelte-js.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-svelte-js.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Svelte and JavaScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Svelte template
+npm create vite@"latest" $ProjectName --template svelte
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/app.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-svelte3 prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Svelte and JavaScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-svelte-ts.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-svelte-ts.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Svelte and TypeScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Svelte + TypeScript template
+npm create vite@"latest" $ProjectName --template svelte-ts
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/app.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-svelte3 prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Svelte and TypeScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-solid-js.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-solid-js.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Solid.js and JavaScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Solid.js template
+npm create vite@"latest" $ProjectName --template solid
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/index.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-solid eslint-plugin-react eslint-plugin-react-hooks prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Solid.js and JavaScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-solid-ts.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-solid-ts.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Solid.js and TypeScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Solid.js + TypeScript template
+npm create vite@"latest" $ProjectName --template solid-ts
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/index.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-solid eslint-plugin-react eslint-plugin-react-hooks prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Solid.js and TypeScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-preact-js.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-preact-js.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Preact and JavaScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Preact template
+npm create vite@"latest" $ProjectName --template preact
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/index.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-preact prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Preact and JavaScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-preact-ts.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-preact-ts.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Preact and TypeScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Preact + TypeScript template
+npm create vite@"latest" $ProjectName --template preact-ts
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/index.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-preact prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Preact and TypeScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-lit-js.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-lit-js.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Lit and JavaScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Lit template
+npm create vite@"latest" $ProjectName --template lit
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/styles.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Lit and JavaScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-lit-ts.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-lit-ts.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Lit and TypeScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Lit + TypeScript template
+npm create vite@"latest" $ProjectName --template lit-ts
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/styles.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Lit and TypeScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-vanilla-js.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-vanilla-js.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Vanilla JavaScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Vanilla JS template
+npm create vite@"latest" $ProjectName --template vanilla
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "style.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Vanilla JavaScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-vanilla-ts.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-vanilla-ts.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Vanilla TypeScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Vanilla TS template
+npm create vite@"latest" $ProjectName --template vanilla-ts
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "style.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Vanilla TypeScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-marko-js.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-marko-js.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Marko and JavaScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Marko template
+npm create vite@"latest" $ProjectName --template marko
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/styles.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Marko and JavaScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-angular-js.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-angular-js.ps1
+param(
+    [string]$ProjectName = "frontend"
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Angular and JavaScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Angular template
+npm create vite@"latest" $ProjectName --template angular
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/styles.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-angular prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Angular and JavaScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-qwik-js.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-qwik-js.ps1
+param(
+    [string]$ProjectName = "frontend"
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with Qwik and JavaScript.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with Qwik template
+npm create vite@"latest" $ProjectName --template qwik
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/styles.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 6: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 7: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 8: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# 🎉 Your Vite project with Qwik and JavaScript is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-template.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-template.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [string]$Framework = "react",
+    [string]$Variant = "js",
+    [string]$ExtraPackages = "",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will help you create a Vite project with your choice of framework and language.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with selected framework and variant
+npm create vite@"latest" $ProjectName --template "$Framework$Variant"
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Install Extra Packages ---
+
+# Install any additional packages specified by the user
+if ($ExtraPackages) {
+    npm install $ExtraPackages
+}
+
+# --- Step 6: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/index.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 7: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 8: Git Initialization ---
+
+# Initialize a new Git repository if not skipped by the user
+if (-not $SkipGit) {
+    git init
+}
+
+# --- Step 9: Start Development Server ---
+
+# Start the Vite development server unless skipped by the user
+if (-not $SkipAutoStart) {
+    npm run dev
+}
+
+# 🎉 Your Vite project is ready! Open it in your browser at http://localhost:5173
+```
+
+</details>
+
+<details>
+<summary><strong>setup-vite-frontend.ps1</strong></summary>
+
+```powershell
+# filepath: d:\tools\setup-vite-frontend.ps1
+param(
+    [string]$ProjectName = "frontend",
+    [switch]$SkipGit,
+    [switch]$SkipAutoStart,
+    [string]$ApiUrl = "http://localhost:3000/api"
+)
+
+# 🎉 Welcome to Vite Project Setup Scripts!
+
+# This script will quickly set up a Vite project with a full-stack JavaScript template.
+# Let's get started!
+
+# --- Step 1: Environment Setup ---
+
+# Ensure PowerShell is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run PowerShell as Administrator." -ForegroundColor Red
+    exit
+}
+
+# --- Step 2: Install Vite ---
+
+# Check if Vite is already installed
+$viteInstalled = Get-Command vite -ErrorAction SilentlyContinue
+
+if (-not $viteInstalled) {
+    Write-Host "Vite is not installed. Installing globally..." -ForegroundColor Yellow
+    npm install -g create-vite
+} else {
+    Write-Host "Vite is already installed. Skipping installation." -ForegroundColor Green
+}
+
+# --- Step 3: Create Vite Project ---
+
+# Set project name
+if (-not $ProjectName) {
+    $ProjectName = "my-vite-app"
+}
+
+# Create Vite project with React + TypeScript template
+npm create vite@"latest" $ProjectName --template react-ts
+
+# --- Step 4: Install Dependencies ---
+
+# Navigate to project directory
+cd $ProjectName
+
+# Install project dependencies
+npm install
+
+# --- Step 5: Install Full-Stack Dependencies ---
+
+# Install additional packages for full-stack development
+npm install express cors dotenv mongoose
+
+# --- Step 6: Configure Tailwind CSS ---
+
+# Install Tailwind CSS and dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind CSS
+npx tailwindcss init -p
+
+# Add Tailwind CSS to your CSS
+Add-Content -Path "src/index.css" -Value "@tailwind base; @tailwind components; @tailwind utilities;"
+
+# --- Step 7: Setup ESLint ---
+
+# Install ESLint and Prettier
+npm install -D eslint eslint-plugin-react eslint-plugin-react-hooks prettier eslint-config-prettier
+
+# Initialize ESLint
+npx eslint --init
+
+# --- Step 8: Git Initialization ---
+
+# Initialize a new Git repository
+git init
+
+# --- Step 9: Create Server Directory ---
+
+# Create a directory for the backend server
+New-Item -ItemType Directory -Path "server"
+
+# --- Step 10: Create Server Files ---
+
+# Create a basic server setup
+@"
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
+require('dotenv').config();
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/myapp', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
+app.get('/', (req, res) => {
+    res.send('API is running...');
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+"@ | Set-Content -Path "server/index.js"
+
+# --- Step 11: Environment Variables ---
+
+# Create a .env file for environment variables
+@"
+MONGODB_URI=mongodb://localhost:27017/myapp
+PORT=3000
+"@ | Set-Content -Path ".env"
+
+# --- Step 12: Start Development Server ---
+
+# Start the Vite development server
+npm run dev
+
+# --- Step 13: Start Backend Server ---
+
+# Start the Express backend server
+node server/index.js
+
+# 🎉 Your Vite full-stack project is ready! Open the frontend in your browser at http://localhost:5173 and the backend at http://localhost:3000
+```
+
+</details>
