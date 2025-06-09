@@ -115,6 +115,10 @@ if (-not $SkipGit -and (Get-Command git -ErrorAction SilentlyContinue)) {
     git commit -m "Initial commit" | Out-Null
 }
 
+if (Get-Command code -ErrorAction SilentlyContinue) {
+    code .
+}
+
 Write-Host "Project setup completed successfully!" -ForegroundColor Green
 Write-Host ""
 Write-Host "To start development:" -ForegroundColor Cyan
@@ -141,6 +145,7 @@ if (-not $SkipAutoStart) {
         } catch {
             Write-Host "Failed to start dev server. Please run 'npm run dev' manually." -ForegroundColor Red
         }
+        Write-Host "Your app should be running at http://localhost:5173/" -ForegroundColor Green
     } else {
         Write-Host "Port 5173 is already in use. Please free the port or run 'npm run dev' manually." -ForegroundColor Red
     }

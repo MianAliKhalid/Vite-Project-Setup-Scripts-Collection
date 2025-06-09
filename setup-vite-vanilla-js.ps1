@@ -27,14 +27,53 @@ if (Test-Path $ProjectName) {
 $ErrorActionPreference = "Stop"
 
 $Template = "vanilla"
+$ExtraPackages = "tailwindcss postcss autoprefixer"
+
 Write-Host "Creating Vite project with template: $Template" -ForegroundColor Yellow
 npm create vite@latest $ProjectName -- --template $Template
 Set-Location $ProjectName
 npm install
+npm install $ExtraPackages
 
-# Add .env file
+Write-Host "Configuring Tailwind CSS..." -ForegroundColor Yellow
+npx tailwindcss init -p
+
+Remove-Item -Path ".postcssrc" -ErrorAction SilentlyContinue
+Remove-Item -Path ".postcssrc.json" -ErrorAction SilentlyContinue
+Remove-Item -Path "postcss.config.json" -ErrorAction SilentlyContinue
+
+@"
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+"@ | Out-File -FilePath "postcss.config.cjs" -Encoding UTF8
+
+@"
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+"@ | Out-File -FilePath "tailwind.config.js" -Encoding UTF8
+
+@"
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+"@ | Out-File -FilePath "src/style.css" -Encoding UTF8
+
 @"
 VITE_APP_TITLE=$ProjectName
+VITE_API_URL=http://localhost:3000/api
 "@ | Out-File -FilePath ".env" -Encoding UTF8
 
 # Add .gitignore file
@@ -91,6 +130,8 @@ SOFTWARE.
 This project was bootstrapped with [Vite](https://vitejs.dev/) and includes:
 
 - Vanilla JS
+- Tailwind CSS
+- PostCSS
 
 ## Getting Started
 
