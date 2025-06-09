@@ -377,10 +377,14 @@ npm install -g npm@latest
 
 - **Why am I getting a 404 Not Found when using Invoke-WebRequest or opening the raw script link?**
 
-  - The script file does **not exist** in the `main` branch of the public GitHub repository.
+  - The script file does **not exist** in the `main` branch of the public GitHub repository **at the expected path**.
   - You may be working in a **private** or **local** repository, or the file has not been pushed to GitHub.
   - The filename or path in the URL may be **misspelled** or **incorrect**.
   - The repository or file may have been **deleted or renamed**.
+  - **Sometimes, a script may exist in the repo UI (e.g.,**  
+    [setup-vite-lit-ts.ps1](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/blob/main/setup-vite-lit-ts.ps1) **) but not at the raw URL (e.g.,**  
+    [setup-vite-react-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-js.ps1) **) if the file is missing, renamed, or not pushed.**  
+    Always check both the GitHub UI and the raw link.
 
 - **How to fix:**
   1. **Check the repository on GitHub:**  
@@ -389,21 +393,25 @@ npm install -g npm@latest
      - Make sure you have pushed all your local files to GitHub.
      - If you are the repo owner, commit and push the script file.
      - If you are a user, contact the maintainer or check for updates.
-  3. **If the file exists:**  
+  3. **If the file exists in the repo UI but not at the raw URL:**  
+     - Double-check the **case sensitivity** and **file extension** (`.ps1`) in the URL.
+     - Sometimes, files may be present in a different branch or folder.
+     - Try opening the file in the GitHub UI, click **Raw**, and copy the URL from your browser to ensure it's correct.
+  4. **If the file exists:**  
      - Click the script file in GitHub, then click **Raw** to view the raw script.
      - Copy the content and save it as a `.ps1` file locally.
      - Run the script in PowerShell as needed.
 
 - **Example: Manual Copy**
-  1. Open the script link in your browser (e.g., [setup-vite-react-js.ps1](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/blob/main/setup-vite-react-js.ps1)).
+  1. Open the script link in your browser (e.g., [setup-vite-lit-ts.ps1](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/blob/main/setup-vite-lit-ts.ps1)).
   2. Click the **Raw** button.
   3. Copy all the script content.
-  4. Paste into a file named `setup-vite-react-js.ps1` in your local folder.
+  4. Paste into a file named `setup-vite-lit-ts.ps1` in your local folder.
   5. Run the script in PowerShell.
 
 - **Note:**  
   The `Invoke-WebRequest` command will only work if the script is available at the raw URL.  
-  If you get a 404 error, always check the repository and file existence first.
+  If you get a 404 error, always check the repository and file existence first, and verify the exact path and filename.
 
 ## 🤝 Contributing
 
@@ -524,10 +532,14 @@ iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Set
 
 - **Why am I getting a 404 Not Found when using Invoke-WebRequest or opening the raw script link?**
 
-  - The script file does **not exist** in the `main` branch of the public GitHub repository.
+  - The script file does **not exist** in the `main` branch of the public GitHub repository **at the expected path**.
   - You may be working in a **private** or **local** repository, or the file has not been pushed to GitHub.
   - The filename or path in the URL may be **misspelled** or **incorrect**.
   - The repository or file may have been **deleted or renamed**.
+  - **Sometimes, a script may exist in the repo UI (e.g.,**  
+    [setup-vite-lit-ts.ps1](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/blob/main/setup-vite-lit-ts.ps1) **) but not at the raw URL (e.g.,**  
+    [setup-vite-react-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-js.ps1) **) if the file is missing, renamed, or not pushed.**  
+    Always check both the GitHub UI and the raw link.
 
 - **How to fix:**
   1. **Check the repository on GitHub:**  
@@ -536,18 +548,22 @@ iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Set
      - Make sure you have pushed all your local files to GitHub.
      - If you are the repo owner, commit and push the script file.
      - If you are a user, contact the maintainer or check for updates.
-  3. **If the file exists:**  
+  3. **If the file exists in the repo UI but not at the raw URL:**  
+     - Double-check the **case sensitivity** and **file extension** (`.ps1`) in the URL.
+     - Sometimes, files may be present in a different branch or folder.
+     - Try opening the file in the GitHub UI, click **Raw**, and copy the URL from your browser to ensure it's correct.
+  4. **If the file exists:**  
      - Click the script file in GitHub, then click **Raw** to view the raw script.
      - Copy the content and save it as a `.ps1` file locally.
      - Run the script in PowerShell as needed.
 
 - **Example: Manual Copy**
-  1. Open the script link in your browser (e.g., [setup-vite-react-js.ps1](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/blob/main/setup-vite-react-js.ps1)).
+  1. Open the script link in your browser (e.g., [setup-vite-lit-ts.ps1](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/blob/main/setup-vite-lit-ts.ps1)).
   2. Click the **Raw** button.
   3. Copy all the script content.
-  4. Paste into a file named `setup-vite-react-js.ps1` in your local folder.
+  4. Paste into a file named `setup-vite-lit-ts.ps1` in your local folder.
   5. Run the script in PowerShell.
 
 - **Note:**  
   The `Invoke-WebRequest` command will only work if the script is available at the raw URL.  
-  If you get a 404 error, always check the repository and file existence first.
+  If you get a 404 error, always check the repository and file existence first, and verify the exact path and filename.
