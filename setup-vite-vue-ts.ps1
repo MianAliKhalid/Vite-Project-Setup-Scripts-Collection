@@ -173,3 +173,11 @@ if (-not $SkipAutoStart) {
         Write-Host "Port 5173 is already in use. Please free the port or run 'npm run dev' manually." -ForegroundColor Red
     }
 }
+
+Write-Host "Project setup completed successfully!" -ForegroundColor Green
+Write-Host ""
+Write-Host "To start development:" -ForegroundColor Cyan
+Write-Host "  cd $ProjectName" -ForegroundColor White
+Write-Host "  npm run dev" -ForegroundColor White
+Write-Host ""
+Write-Host "Happy coding!" -ForegroundColor Green
