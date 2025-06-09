@@ -48,20 +48,14 @@ if ($ExtraPackages -ne "") {
     npm install $ExtraPackages
 }
 
-@"
-VITE_APP_TITLE=$ProjectName
-VITE_API_URL=http://localhost:3000/api
-"@ | Out-File -FilePath ".env" -Encoding UTF8
+# Create .env file
+Set-Content -Path ".env" -Value "VITE_APP_TITLE=$ProjectName`nVITE_API_URL=http://localhost:3000/api" -Encoding UTF8
 
-@"
-node_modules
-dist
-.env
-.DS_Store
-.vscode
-"@ | Out-File -FilePath ".gitignore" -Encoding UTF8
+# Create .gitignore
+Set-Content -Path ".gitignore" -Value "node_modules`ndist`n.env`n.DS_Store`n.vscode" -Encoding UTF8
 
-@"
+# Create .editorconfig
+$editorConfig = @"
 root = true
 
 [*]
@@ -71,9 +65,11 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
-"@ | Out-File -FilePath ".editorconfig" -Encoding UTF8
+"@
+Set-Content -Path ".editorconfig" -Value $editorConfig -Encoding UTF8
 
-@"
+# Create LICENSE
+$licenseContent = @"
 MIT License
 
 Copyright (c) $(Get-Date -Format yyyy)
@@ -95,20 +91,23 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-"@ | Out-File -FilePath "LICENSE" -Encoding UTF8
+"@
+Set-Content -Path "LICENSE" -Value $licenseContent -Encoding UTF8
 
-@"
+# Create README.md
+$readmeContent = @"
 # $ProjectName
 
 This project was bootstrapped with [Vite](https://vitejs.dev/) using template: $template
 
 ## Getting Started
 
-\`\`\`bash
+```bash
 npm install
 npm run dev
-\`\`\`
-"@ | Out-File -FilePath "README.md" -Encoding UTF8
+```
+"@
+Set-Content -Path "README.md" -Value $readmeContent -Encoding UTF8
 
 if (-not $SkipGit -and (Get-Command git -ErrorAction SilentlyContinue)) {
     git init | Out-Null
