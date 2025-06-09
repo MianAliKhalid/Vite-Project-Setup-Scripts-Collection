@@ -35,6 +35,7 @@ npm install
 
 @"
 VITE_APP_TITLE=$ProjectName
+VITE_API_URL=http://localhost:3000/api
 "@ | Out-File -FilePath ".env" -Encoding UTF8
 
 @"
