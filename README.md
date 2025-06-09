@@ -521,70 +521,32 @@ MIT License - Free for personal and commercial use
 
 ### 📥 Direct Script Links
 
-> **⚠️ Some scripts may not work if they are incomplete or corrupted in the repository.  
-> If you get a "missing the terminator: \"@\"" error, the script file needs to be fixed by the repository maintainer.  
-> See below for details.**
+Below are ready-to-use commands for each script.  
+**Click the "Copy" button to copy the command, then paste it into your PowerShell terminal.**
 
-You can copy any script link below and run it directly in PowerShell:
+| Script | Command | Copy |
+|--------|---------|------|
+| **React + JS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-js.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-js.ps1\").Content')">Copy</button> |
+| **React + TS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-ts.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-ts.ps1\").Content')">Copy</button> |
+| **Vue + JS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-js.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-js.ps1\").Content')">Copy</button> |
+| **Vue + TS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-ts.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-ts.ps1\").Content')">Copy</button> |
+| **Svelte + JS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-js.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-js.ps1\").Content')">Copy</button> |
+| **Svelte + TS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-ts.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-ts.ps1\").Content')">Copy</button> |
+| **Solid + JS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-js.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-js.ps1\").Content')">Copy</button> |
+| **Solid + TS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-ts.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-ts.ps1\").Content')">Copy</button> |
+| **Preact + JS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-js.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-js.ps1\").Content')">Copy</button> |
+| **Preact + TS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-ts.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-ts.ps1\").Content')">Copy</button> |
+| **Lit + JS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-js.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-js.ps1\").Content')">Copy</button> |
+| **Lit + TS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-ts.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-ts.ps1\").Content')">Copy</button> |
+| **Vanilla + JS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-js.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-js.ps1\").Content')">Copy</button> |
+| **Vanilla + TS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-ts.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-ts.ps1\").Content')">Copy</button> |
+| **Marko + JS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-marko-js.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-marko-js.ps1\").Content')">Copy</button> |
+| **Angular + JS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-angular-js.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-angular-js.ps1\").Content')">Copy</button> |
+| **Qwik + JS** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-qwik-js.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-qwik-js.ps1\").Content')">Copy</button> |
+| **Full Stack** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-frontend.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-frontend.ps1\").Content')">Copy</button> |
+| **Generic/Template** | <code>iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-template.ps1").Content</code> | <button onclick="navigator.clipboard.writeText('iex (iwr -useb \"https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-template.ps1\").Content')">Copy</button> |
 
-| Script | Raw Link |
-|--------|----------|
-| **React + JS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-js.ps1` |
-| **React + TS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-ts.ps1` |
-| **Vue + JS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-js.ps1` |
-| **Vue + TS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-ts.ps1` |
-| **Svelte + JS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-js.ps1` |
-| **Svelte + TS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-ts.ps1` |
-| **Solid + JS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-js.ps1` |
-| **Solid + TS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-ts.ps1` |
-| **Preact + JS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-js.ps1` |
-| **Preact + TS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-ts.ps1` |
-| **Lit + JS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-js.ps1` |
-| **Lit + TS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-ts.ps1` |
-| **Vanilla + JS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-js.ps1` |
-| **Vanilla + TS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-ts.ps1` |
-| **Marko + JS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-marko-js.ps1` |
-| **Angular + JS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-angular-js.ps1` |
-| **Qwik + JS** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-qwik-js.ps1` |
-| **Full Stack** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-frontend.ps1` |
-| **Generic/Template** | `https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-template.ps1` |
-
-**How to use:**
-
-1. **Copy the Raw Link** for your desired script (just the URL, not a clickable link).
-2. **In VS Code terminal or PowerShell**, run this command (replace the URL with your copied link):
-
-   ```powershell
-   iex (iwr -useb "PASTE_RAW_LINK_HERE").Content
-   ```
-
-   **Example:**
-   ```powershell
-   iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-js.ps1").Content
-   ```
-
-   > ⚠️ **Do NOT paste the URL directly into the terminal.**  
-   > You must use the `iex (iwr -useb "...").Content` command as shown above.  
-   > Pasting the URL alone will not run the script and will result in a "not recognized as the name of a cmdlet" error.
-
-3. **Your project will be set up automatically!**
-
----
-
-#### ⚠️ If you get a 404 Not Found error
-
-- The script file may not exist at the raw URL.  
-- Double-check the spelling, file extension, and that the file is pushed to the `main` branch.
-- If the script exists in the GitHub UI but not at the raw link, click the file in GitHub, click **Raw**, copy all content, and paste it into a `.ps1` file in VS Code, then run it.
-
----
-
-#### ⚠️ If you get a "missing the terminator: \"@\"" error
-
-- This means the script file in the repository is **incomplete or corrupted** (for example, a here-string is missing its closing `@"`).
-- **How to fix:**
-  - If you are the repository owner, open the script file (e.g., `setup-vite-react-js.ps1`) in GitHub and ensure every block that starts with `@"` ends with a line containing only `@"`.
-  - If you are a user, report the issue to the maintainer or check if another script works.
-  - You can also try copying the script from the GitHub UI (click the file, then "Raw", select all, copy, and paste into a `.ps1` file in VS Code), but if the file is incomplete, only the maintainer can fix it.
+> **Note:** The copy button works in browsers that support the Clipboard API (like Chrome/Edge).  
+> If it doesn't work, just manually copy the command from the table.
 
 ---
