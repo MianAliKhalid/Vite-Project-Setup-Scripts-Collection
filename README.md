@@ -461,29 +461,43 @@ MIT License - Free for personal and commercial use
 
 You can copy any script link below and run it directly in PowerShell:
 
-| Script | Raw Link |
-|--------|----------|
-| **React + JS** | [setup-vite-react-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-js.ps1) |
-| **React + TS** | [setup-vite-react-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-ts.ps1) |
-| **Vue + JS** | [setup-vite-vue-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-js.ps1) |
-| **Vue + TS** | [setup-vite-vue-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-ts.ps1) |
-| **Svelte + JS** | [setup-vite-svelte-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-js.ps1) |
-| **Svelte + TS** | [setup-vite-svelte-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-ts.ps1) |
-| **Solid + JS** | [setup-vite-solid-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-js.ps1) |
-| **Solid + TS** | [setup-vite-solid-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-ts.ps1) |
-| **Preact + JS** | [setup-vite-preact-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-js.ps1) |
-| **Preact + TS** | [setup-vite-preact-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-ts.ps1) |
-| **Lit + JS** | [setup-vite-lit-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-js.ps1) |
-| **Lit + TS** | [setup-vite-lit-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-ts.ps1) |
-| **Vanilla + JS** | [setup-vite-vanilla-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-js.ps1) |
-| **Vanilla + TS** | [setup-vite-vanilla-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-ts.ps1) |
-| **Marko + JS** | [setup-vite-marko-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-marko-js.ps1) |
-| **Angular + JS** | [setup-vite-angular-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-angular-js.ps1) |
-| **Qwik + JS** | [setup-vite-qwik-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-qwik-js.ps1) |
-| **Full Stack** | [setup-vite-frontend.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-frontend.ps1) |
-| **Generic/Template** | [setup-vite-template.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-template.ps1) |
+| Script | Raw Link | Copy |
+|--------|----------|------|
+| **React + JS** | [setup-vite-react-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-js.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-js.ps1" target="_blank">📋 Copy</a> |
+| **React + TS** | [setup-vite-react-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-ts.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-ts.ps1" target="_blank">📋 Copy</a> |
+| **Vue + JS** | [setup-vite-vue-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-js.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-js.ps1" target="_blank">📋 Copy</a> |
+| **Vue + TS** | [setup-vite-vue-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-ts.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vue-ts.ps1" target="_blank">📋 Copy</a> |
+| **Svelte + JS** | [setup-vite-svelte-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-js.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-js.ps1" target="_blank">📋 Copy</a> |
+| **Svelte + TS** | [setup-vite-svelte-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-ts.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-svelte-ts.ps1" target="_blank">📋 Copy</a> |
+| **Solid + JS** | [setup-vite-solid-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-js.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-js.ps1" target="_blank">📋 Copy</a> |
+| **Solid + TS** | [setup-vite-solid-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-ts.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-solid-ts.ps1" target="_blank">📋 Copy</a> |
+| **Preact + JS** | [setup-vite-preact-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-js.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-js.ps1" target="_blank">📋 Copy</a> |
+| **Preact + TS** | [setup-vite-preact-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-ts.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-preact-ts.ps1" target="_blank">📋 Copy</a> |
+| **Lit + JS** | [setup-vite-lit-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-js.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-js.ps1" target="_blank">📋 Copy</a> |
+| **Lit + TS** | [setup-vite-lit-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-ts.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-lit-ts.ps1" target="_blank">📋 Copy</a> |
+| **Vanilla + JS** | [setup-vite-vanilla-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-js.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-js.ps1" target="_blank">📋 Copy</a> |
+| **Vanilla + TS** | [setup-vite-vanilla-ts.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-ts.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-vanilla-ts.ps1" target="_blank">📋 Copy</a> |
+| **Marko + JS** | [setup-vite-marko-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-marko-js.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-marko-js.ps1" target="_blank">📋 Copy</a> |
+| **Angular + JS** | [setup-vite-angular-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-angular-js.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-angular-js.ps1" target="_blank">📋 Copy</a> |
+| **Qwik + JS** | [setup-vite-qwik-js.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-qwik-js.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-qwik-js.ps1" target="_blank">📋 Copy</a> |
+| **Full Stack** | [setup-vite-frontend.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-frontend.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-frontend.ps1" target="_blank">📋 Copy</a> |
+| **Generic/Template** | [setup-vite-template.ps1](https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-template.ps1) | <a href="https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-template.ps1" target="_blank">📋 Copy</a> |
 
 **Example usage:**
 ```powershell
 iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-js.ps1").Content
 ```
+
+#### ⚠️ Troubleshooting Script Download Issues
+
+- If you get a **404 Not Found** error when opening a script link:
+  - Make sure the script exists in the repository's `main` branch.
+  - The script may have been renamed, moved, or not pushed yet.
+  - Visit the [GitHub repository scripts folder](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection) and check if the script file is present.
+  - If present, click the script file, then click the **"Raw"** button to view/copy the script content manually.
+  - If not present, please update your repository or contact the maintainer.
+
+- **How to copy a script manually:**
+  1. Go to the script file in the GitHub repo.
+  2. Click **Raw**.
+  3. Select all, copy, and paste into a `.ps1` file in VS Code.
