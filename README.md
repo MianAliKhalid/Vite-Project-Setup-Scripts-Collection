@@ -526,14 +526,21 @@ You can copy any script link below and run it directly in PowerShell:
 **How to use:**
 
 1. **Copy the Raw Link** for your desired script (just the URL, not a clickable link).
-2. **In VS Code or PowerShell**, run:
+2. **In VS Code terminal or PowerShell**, run this command (replace the URL with your copied link):
+
    ```powershell
    iex (iwr -useb "PASTE_RAW_LINK_HERE").Content
    ```
-   Example:
+
+   **Example:**
    ```powershell
    iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/main/setup-vite-react-js.ps1").Content
    ```
+
+   > ⚠️ **Do NOT paste the URL directly into the terminal.**  
+   > You must use the `iex (iwr -useb "...").Content` command as shown above.  
+   > Pasting the URL alone will not run the script and will result in a "not recognized as the name of a cmdlet" error.
+
 3. **Your project will be set up automatically!**
 
 ---
