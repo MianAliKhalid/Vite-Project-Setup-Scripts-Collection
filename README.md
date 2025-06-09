@@ -413,6 +413,28 @@ npm install -g npm@latest
   The `Invoke-WebRequest` command will only work if the script is available at the raw URL.  
   If you get a 404 error, always check the repository and file existence first, and verify the exact path and filename.
 
+#### ⚠️ Script Parse Error: "The string is missing the terminator: \"@\""
+
+- If you see an error like:
+  ```
+  The string is missing the terminator: "@"
+  ```
+  This means the script you downloaded from the raw link is **incomplete or corrupted** (often due to missing the end of a here-string or copy-paste error).
+
+- **How to fix:**
+  1. **Check the script file in the GitHub UI** to ensure it is complete and ends properly.
+  2. **If using the raw link:**  
+     - Make sure the script is fully uploaded and not truncated.
+     - Try refreshing the raw link in your browser and check if the script ends with all code and terminators.
+  3. **If the script is incomplete:**  
+     - Contact the repository maintainer to fix the script file.
+     - Or, manually copy the script from the GitHub UI (click the file, then "Raw", select all, copy, and paste into a `.ps1` file in VS Code).
+  4. **If you are the maintainer:**  
+     - Edit the script file and ensure all here-strings (blocks starting with `@"`) are properly closed with `@"` on a new line.
+
+- **Tip:**  
+  Always verify the script content in the GitHub UI and raw link before running it in PowerShell.
+
 ## 🤝 Contributing
 
 We welcome contributions! Here's how to get started:
@@ -499,6 +521,10 @@ MIT License - Free for personal and commercial use
 
 ### 📥 Direct Script Links
 
+> **⚠️ Some scripts may not work if they are incomplete or corrupted in the repository.  
+> If you get a "missing the terminator: \"@\"" error, the script file needs to be fixed by the repository maintainer.  
+> See below for details.**
+
 You can copy any script link below and run it directly in PowerShell:
 
 | Script | Raw Link |
@@ -550,5 +576,15 @@ You can copy any script link below and run it directly in PowerShell:
 - The script file may not exist at the raw URL.  
 - Double-check the spelling, file extension, and that the file is pushed to the `main` branch.
 - If the script exists in the GitHub UI but not at the raw link, click the file in GitHub, click **Raw**, copy all content, and paste it into a `.ps1` file in VS Code, then run it.
+
+---
+
+#### ⚠️ If you get a "missing the terminator: \"@\"" error
+
+- This means the script file in the repository is **incomplete or corrupted** (for example, a here-string is missing its closing `@"`).
+- **How to fix:**
+  - If you are the repository owner, open the script file (e.g., `setup-vite-react-js.ps1`) in GitHub and ensure every block that starts with `@"` ends with a line containing only `@"`.
+  - If you are a user, report the issue to the maintainer or check if another script works.
+  - You can also try copying the script from the GitHub UI (click the file, then "Raw", select all, copy, and paste into a `.ps1` file in VS Code), but if the file is incomplete, only the maintainer can fix it.
 
 ---
