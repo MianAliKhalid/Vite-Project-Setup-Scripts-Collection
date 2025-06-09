@@ -132,7 +132,7 @@ iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Set
 </details>
 
 <details>
-<summary><strong>⚡ Vanilla JavaScript</strong></summary>
+<summary><strong>⚡ Vanilla JavaScript </strong></summary>
 
 ```powershell
 # 🚀 Pure JavaScript power
