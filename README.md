@@ -373,6 +373,38 @@ npm install -g npm@latest
 
 </details>
 
+#### ⚠️ Troubleshooting Script Download Issues
+
+- **Why am I getting a 404 Not Found when using Invoke-WebRequest or opening the raw script link?**
+
+  - The script file does **not exist** in the `main` branch of the public GitHub repository.
+  - You may be working in a **private** or **local** repository, or the file has not been pushed to GitHub.
+  - The filename or path in the URL may be **misspelled** or **incorrect**.
+  - The repository or file may have been **deleted or renamed**.
+
+- **How to fix:**
+  1. **Check the repository on GitHub:**  
+     Go to [Vite-Project-Setup-Scripts-Collection](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection) and verify that the script file (e.g., `setup-vite-react-js.ps1`) exists in the root or correct folder.
+  2. **If the file is missing:**  
+     - Make sure you have pushed all your local files to GitHub.
+     - If you are the repo owner, commit and push the script file.
+     - If you are a user, contact the maintainer or check for updates.
+  3. **If the file exists:**  
+     - Click the script file in GitHub, then click **Raw** to view the raw script.
+     - Copy the content and save it as a `.ps1` file locally.
+     - Run the script in PowerShell as needed.
+
+- **Example: Manual Copy**
+  1. Open the script link in your browser (e.g., [setup-vite-react-js.ps1](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/blob/main/setup-vite-react-js.ps1)).
+  2. Click the **Raw** button.
+  3. Copy all the script content.
+  4. Paste into a file named `setup-vite-react-js.ps1` in your local folder.
+  5. Run the script in PowerShell.
+
+- **Note:**  
+  The `Invoke-WebRequest` command will only work if the script is available at the raw URL.  
+  If you get a 404 error, always check the repository and file existence first.
+
 ## 🤝 Contributing
 
 We welcome contributions! Here's how to get started:
@@ -490,14 +522,32 @@ iex (iwr -useb "https://raw.githubusercontent.com/MianAliKhalid/Vite-Project-Set
 
 #### ⚠️ Troubleshooting Script Download Issues
 
-- If you get a **404 Not Found** error when opening a script link:
-  - Make sure the script exists in the repository's `main` branch.
-  - The script may have been renamed, moved, or not pushed yet.
-  - Visit the [GitHub repository scripts folder](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection) and check if the script file is present.
-  - If present, click the script file, then click the **"Raw"** button to view/copy the script content manually.
-  - If not present, please update your repository or contact the maintainer.
+- **Why am I getting a 404 Not Found when using Invoke-WebRequest or opening the raw script link?**
 
-- **How to copy a script manually:**
-  1. Go to the script file in the GitHub repo.
-  2. Click **Raw**.
-  3. Select all, copy, and paste into a `.ps1` file in VS Code.
+  - The script file does **not exist** in the `main` branch of the public GitHub repository.
+  - You may be working in a **private** or **local** repository, or the file has not been pushed to GitHub.
+  - The filename or path in the URL may be **misspelled** or **incorrect**.
+  - The repository or file may have been **deleted or renamed**.
+
+- **How to fix:**
+  1. **Check the repository on GitHub:**  
+     Go to [Vite-Project-Setup-Scripts-Collection](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection) and verify that the script file (e.g., `setup-vite-react-js.ps1`) exists in the root or correct folder.
+  2. **If the file is missing:**  
+     - Make sure you have pushed all your local files to GitHub.
+     - If you are the repo owner, commit and push the script file.
+     - If you are a user, contact the maintainer or check for updates.
+  3. **If the file exists:**  
+     - Click the script file in GitHub, then click **Raw** to view the raw script.
+     - Copy the content and save it as a `.ps1` file locally.
+     - Run the script in PowerShell as needed.
+
+- **Example: Manual Copy**
+  1. Open the script link in your browser (e.g., [setup-vite-react-js.ps1](https://github.com/MianAliKhalid/Vite-Project-Setup-Scripts-Collection/blob/main/setup-vite-react-js.ps1)).
+  2. Click the **Raw** button.
+  3. Copy all the script content.
+  4. Paste into a file named `setup-vite-react-js.ps1` in your local folder.
+  5. Run the script in PowerShell.
+
+- **Note:**  
+  The `Invoke-WebRequest` command will only work if the script is available at the raw URL.  
+  If you get a 404 error, always check the repository and file existence first.
